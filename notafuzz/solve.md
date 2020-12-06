@@ -1,8 +1,10 @@
 First I opened the program with netcat and tryed it and I was thinking that I can use some vulnerable string like %s %p %x but no luck
 Then I tryed to open the binary file with Binary Ninja. I found the main and the input that we give and renamed it to **input** and the for loop iterator to **i**
+
 ![img](https://raw.githubusercontent.com/L1ghtDream/cyberedu/master/notafuzz/images/1.png?raw=true)
 
 I found that something special is happening at **i = 3**
+
 ![img](https://raw.githubusercontent.com/L1ghtDream/cyberedu/master/notafuzz/images/2.png?raw=true)
 
 But the two ifs are the same I did not found any diferences here in Binary Ninja so I switched to IDA Pro but it could not disassable it.
